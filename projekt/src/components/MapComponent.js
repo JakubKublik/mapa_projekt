@@ -26,18 +26,18 @@ const MapComponent = () => {
         setMap(initialMap);
 
         // Custom marker icon
-        const markerIcon = new L.Icon({
-          iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', // Use custom image URL
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-          shadowSize: [41, 41],
-        });
+        // const markerIcon = new L.Icon({
+        //   iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', // Use custom image URL
+        //   iconSize: [25, 41],
+        //   iconAnchor: [12, 41],
+        //   popupAnchor: [1, -34],
+        //   shadowSize: [41, 41],
+        // });
 
-        // Add a custom marker at the center of Mińsk Mazowiecki with the custom icon
-        L.marker([52.18250843554303, 21.560288691488154], { icon: markerIcon })
-          .addTo(initialMap)
-          .bindPopup("<b>Powiat Miński</b><br>To jest przykładowy marker z niestandardową ikoną.");
+        // // Add a custom marker at the center of Mińsk Mazowiecki with the custom icon
+        // L.marker([52.18250843554303, 21.560288691488154], { icon: markerIcon })
+        //   .addTo(initialMap)
+        //   .bindPopup("<b>Powiat Miński</b><br>To jest przykładowy marker z niestandardową ikoną.");
       })
       .catch((error) => console.error('Error loading GeoJSON:', error));
   }, []);
