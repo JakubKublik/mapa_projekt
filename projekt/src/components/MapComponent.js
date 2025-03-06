@@ -59,7 +59,7 @@ const MapComponent = () => {
                 const longitude = parseFloat(school.longitude?.trim());
                 const nazwa = school.nazwa;
                 const adres = school.adres;
-                const imageUrl = school.zdjecie?.url ? `http://172.16.15.116:1337${school.zdjecie.url}` : 'https://via.placeholder.com/50';
+                const imageUrl = school.zdjecie?.url ? `http://172.16.15.116:1337${school.zdjecie.url}` : 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png';
 
                 if (!isNaN(latitude) && !isNaN(longitude)) {
                   const markerIcon = L.icon({
@@ -91,8 +91,12 @@ const MapComponent = () => {
         }
       })
       .catch((error) => console.error('Error loading GeoJSON:', error));
-  }, []);
 
+    
+  }, []);
+  
+        
+      
   return <div id="map" style={{ height: '100vh', width: '100%' }}></div>;
 };
 
